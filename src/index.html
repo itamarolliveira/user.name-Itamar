@@ -13,13 +13,18 @@
         <div>Status: <strong data-status>Running</strong></div>
       </section>
 
-      <section class="board" data-board aria-label="Snake board"></section>
+      <section class="board" data-board data-state="running" aria-label="Snake board"></section>
 
       <section class="controls" aria-label="Direction controls">
-        <button data-direction="up">Up</button>
-        <button data-direction="left">Left</button>
-        <button data-direction="right">Right</button>
-        <button data-direction="down">Down</button>
+        <span></span>
+        <button data-direction="up" aria-label="Move up">Up</button>
+        <span></span>
+        <button data-direction="left" aria-label="Move left">Left</button>
+        <span></span>
+        <button data-direction="right" aria-label="Move right">Right</button>
+        <span></span>
+        <button data-direction="down" aria-label="Move down">Down</button>
+        <span></span>
       </section>
 
       <section class="actions">
@@ -27,7 +32,7 @@
         <button data-action="restart">Restart</button>
       </section>
 
-      <p class="note">Keyboard: Arrow keys or WASD. Press Space to pause/resume.</p>
+      <p class="note">Keyboard: Arrow keys or WASD. Space = pause/resume. R = restart.</p>
     </main>
     <script type="module" src="/app.js"></script>
   </body>

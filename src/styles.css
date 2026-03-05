@@ -5,6 +5,7 @@
   --muted: #6b7280;
   --grid: #d8dde6;
   --snake: #1f7a1f;
+  --snake-head: #155d15;
   --food: #d62828;
 }
 
@@ -40,7 +41,6 @@ body {
 
 .board {
   display: grid;
-  grid-template-columns: repeat(20, 1fr);
   border: 1px solid var(--grid);
   background: #fff;
   aspect-ratio: 1 / 1;
@@ -54,15 +54,27 @@ body {
   background: var(--snake);
 }
 
+.cell.head {
+  background: var(--snake-head);
+}
+
 .cell.food {
   background: var(--food);
+}
+
+.board[data-state="gameover"] {
+  opacity: 0.9;
 }
 
 .controls {
   margin-top: 12px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
+}
+
+.controls span {
+  display: block;
 }
 
 button {
@@ -71,6 +83,11 @@ button {
   border-radius: 6px;
   padding: 8px 10px;
   cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .actions {
@@ -84,4 +101,10 @@ button {
   margin-top: 10px;
   color: var(--muted);
   font-size: 12px;
+}
+
+@media (max-width: 500px) {
+  button {
+    min-height: 42px;
+  }
 }
