@@ -6,10 +6,6 @@
   --text: #1f2937;
   --muted: #5f6b7a;
   --grid: #d9e5f0;
-  --cell: #f9fcff;
-  --snake: #2a9d8f;
-  --snake-head: #1d6f66;
-  --food: #ef476f;
   --button-bg: #ffeaa7;
   --button-border: #f4a261;
   --button-text: #344055;
@@ -47,31 +43,19 @@ body {
 }
 
 .board {
-  display: grid;
   border: 2px solid var(--grid);
   background: #ffffff;
   aspect-ratio: 1 / 1;
 }
 
-.cell {
-  border: 1px solid var(--grid);
-  background: var(--cell);
-}
-
-.cell.snake {
-  background: var(--snake);
-}
-
-.cell.head {
-  background: var(--snake-head);
-}
-
-.cell.food {
-  background: var(--food);
+.board-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .board[data-state="gameover"] {
-  opacity: 0.86;
+  opacity: 0.88;
 }
 
 .controls {
