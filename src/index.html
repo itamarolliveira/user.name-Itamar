@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Classic</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="game">
+      <section class="hud">
+        <div>Score: <strong data-score>0</strong></div>
+        <div>Status: <strong data-status>Running</strong></div>
+      </section>
+
+      <section class="board" data-board aria-label="Snake board"></section>
+
+      <section class="controls" aria-label="Direction controls">
+        <button data-direction="up">Up</button>
+        <button data-direction="left">Left</button>
+        <button data-direction="right">Right</button>
+        <button data-direction="down">Down</button>
+      </section>
+
+      <section class="actions">
+        <button data-action="pause">Pause</button>
+        <button data-action="restart">Restart</button>
+      </section>
+
+      <p class="note">Keyboard: Arrow keys or WASD. Press Space to pause/resume.</p>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

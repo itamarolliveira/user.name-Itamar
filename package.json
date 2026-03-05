@@ -1,0 +1,10 @@
+﻿{
+  "name": "snake-classic",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tools\\node\\node.exe server.js",
+    "test": "tools\\node\\node.exe --test --test-isolation=none"
+  }
+}
